@@ -1,10 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello React</h1>
+      <h1 className="text-4xl bg-red-500">Hello React</h1>
     </div>
   );
 }
