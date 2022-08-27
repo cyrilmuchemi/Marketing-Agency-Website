@@ -30,7 +30,7 @@ const Layout = ({children}) => {
 
   return (
     <>
-    <div>
+    <div className='pb-44'>
       {children}
     </div>
       <div className='fixed bottom-10 left-0 right-0'>
