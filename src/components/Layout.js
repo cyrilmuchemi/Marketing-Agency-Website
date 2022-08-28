@@ -30,7 +30,7 @@ const Layout = ({children}) => {
 
   return (
     <>
-    <div className='pb-44'>
+    <div className='pb-44 overflow-x-hidden'>
       {children}
     </div>
       <div className='fixed bottom-10 left-0 right-0'>
