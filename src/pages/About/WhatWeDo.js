@@ -37,7 +37,7 @@ const WhatWeDo = () => {
       <div className='grid grid-cols-4 gap-10 mx-24 -mt-40'>
         {items.map(item => {
           return <div className='p-5 bg-white border shadow flex flex-col space-y-5 items-center transform hover:scale-105 duration-300'>
-            <img src={item.icon} className='h-20 w-20'/>
+            <img src={item.icon} className='h-20 w-20' alt=''/>
             <h1 className='text-3xl'>{item.title}</h1>
             <p className='text-gray-600 text-sm'>{item.description}</p>
           </div>     
