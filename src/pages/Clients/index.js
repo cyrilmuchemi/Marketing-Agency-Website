@@ -4,14 +4,12 @@ import ClientsList from './ClientsList';
 import Intro from './Intro';
 import Numbers from './Numbers';
 
-const Clients = () => {
-  return (
-    <Layout>
-      <Intro/>
-      <ClientsList/>
-      <Numbers/>
-    </Layout>
-  )
-}
+const Clients = () => (
+  <Layout>
+    <Intro />
+    <ClientsList />
+    <Numbers />
+  </Layout>
+);
 
 export default Clients;
