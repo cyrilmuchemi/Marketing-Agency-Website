@@ -22,11 +22,11 @@ const WhyChooseUs = () => {
         },
       ];
   return (
-    <div className='mx-24 mt-20 border shadow'>
+    <div className='mx-24 sm:mx-3 mt-20 border shadow'>
         <div className='bg-primary h-72 w-full flex justify-center items-center'>
-            <h1 className='text-white font-semibold text-7xl'>Why Choose Us</h1>
+            <h1 className='text-white sm:text-4xl font-semibold text-7xl'>Why Choose Us</h1>
         </div>
-        <div className='grid grid-cols-3 gap-10 p-5'>
+        <div className='grid grid-cols-3 sm:grid-cols-1 gap-10 p-5'>
         {items.map(item => {
           return <div className='p-5 bg-white border shadow flex flex-col space-y-5 items-center transform hover:scale-105 duration-300'>
             <img src={item.image} className='h-20 w-20' alt=''/>

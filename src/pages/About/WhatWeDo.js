@@ -29,14 +29,14 @@ const WhatWeDo = () => {
         },
       ];
   return (
-    <div className='mt-20'>
-      <h1 className='text-secondary text-8xl text-center font-semibold'>What We Do</h1>
+    <div className='mt-20 sm:mt-10'>
+      <h1 className='text-secondary text-8xl sm:text-5xl text-center font-semibold'>What We Do</h1>
       <div className='bg-primary w-full h-96 mt-12'>
 
       </div>
-      <div className='grid grid-cols-4 gap-10 mx-24 -mt-40'>
+      <div className='grid grid-cols-4 sm:grid-cols-1 sm:w-fit gap-10 mx-24 sm:mx-0 sm:px-5 -mt-40'>
         {items.map(item => {
-          return <div className='p-5 bg-white border shadow flex flex-col space-y-5 items-center transform hover:scale-105 duration-300'>
+          return <div className='p-5 bg-white border shadow flex flex-col space-y-5 items-center transform hover:scale-105 duration-300 sm:w-full'>
             <img src={item.icon} className='h-20 w-20' alt=''/>
             <h1 className='text-3xl'>{item.title}</h1>
             <p className='text-gray-600 text-sm'>{item.description}</p>

@@ -7,7 +7,7 @@ import WhyMarketing from './WhyMarketing';
 const Home = () => {
   return (
     <Layout>
-      <div className='px-20'>
+      <div className='px-20 px-2'>
       <Intro/>
       <MarketingStrategies/>
       <WhyMarketing/>

@@ -64,15 +64,15 @@ const ClientsList = () => {
 
   return (
     <div>
-        <div className='bg-primary h-44 rounded-b-full'></div>
-            <div className='flex justify-center -mt-44 items-end space-x-10'>
-                   {selectedClientIndex!==0 &&  <i className="ri-arrow-left-fill text-4xl text-gray-600 cursor-pointer" onClick={previous}></i>}
-                   <div className='grid grid-cols-3 gap-12'>
+        <div className='bg-primary h-44 rounded-b-full sm:rounded-b-2xl'></div>
+            <div className='flex justify-center sm:space-x-0 sm:p-5 -mt-44 items-end space-x-10'>
+                   {selectedClientIndex!==0 &&  <i className="ri-arrow-left-fill sm:hidden text-4xl text-gray-600 cursor-pointer" onClick={previous}></i>}
+                   <div className='grid grid-cols-3 gap-12 sm:gap-2 sm:grid-cols-1'>
                     
                     {[clients[selectedClientIndex], clients[selectedClientIndex + 1], clients[selectedClientIndex + 2] ].map((item)=> (
-                       <div className='bg-white shadow p-5 w-[350px] border h-[350px]'>
-                       <div className='flex space-x-10 items-center justify-between'>
-                       <img src={item.logo} alt='' className='h-32 w-32'/>
+                       <div className='bg-white shadow p-5 w-[350px] sm:h-auto sm:w-auto border h-[350px]'>
+                       <div className='flex sm:flex-col sm:space-x-0 space-x-10 items-center justify-between'>
+                       <img src={item.logo} alt='' className='h-32 sm:w-10 sm:h-10 w-32'/>
                            <h1 className='text-primary font-semibold text-2xl'>{item.name}</h1>
                        </div>
                        <p className='text-gray-600 mt-10 text-sm'>
@@ -82,7 +82,7 @@ const ClientsList = () => {
                     ))}
 
                    </div>
-                {selectedClientIndex < 4 && <i className="ri-arrow-right-fill text-4xl text-gray-600 cursor-pointer" onClick={next}></i>}
+                {selectedClientIndex < 4 && <i className="ri-arrow-right-fill sm:hidden text-4xl text-gray-600 cursor-pointer" onClick={next}></i>}
             </div>
             <div className='flex justify-center mt-10'>
               <div className='flex space-x-2'>

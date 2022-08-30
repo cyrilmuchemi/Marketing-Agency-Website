@@ -30,8 +30,8 @@ const MarketingStrategies = () => {
     
   return (
     <div>
-      <h1 className='text-primary text-5xl font-semibold'>Want to boost your business growth ? </h1>
-      <h2 className='text-7xl font-semibold text-primary mt-10'>The <b className='text-secondary'>SOLUTION</b> is here..</h2>
+      <h1 className='text-primary sm:text-3xl text-5xl sm:mt-10 font-semibold'>Want to boost your business growth ? </h1>
+      <h2 className='text-7xl font-semibold text-primary sm:text-5xl mt-10'>The <b className='text-secondary'>SOLUTION</b> is here..</h2>
       <p className='text-gray-600 text-xl mt-10'>
         Curious about what business professionals think of different marketing
         strategies? We took a look at recent survey results and reports that
@@ -39,10 +39,10 @@ const MarketingStrategies = () => {
         strategies commonly recognized as successful regardless of industry.
         Here's what we found, in no particular order:
       </p>
-      <div className='grid grid-cols-2 gap-20 mt-10'>
+      <div className='grid grid-cols-2 sm:grid-cols-1 gap-20 mt-10'>
         {strategies.map(item => {
             return <div className='border border-primary p-5 flex flex-col space-y-10 rounded transform hover:scale-105 duration-300'>
-                <h1 className='mx-20 text-center text-secondary -mt-8 bg-white border-primary border text-2xl rounded py-2'>{item.title}</h1>
+                <h1 className='mx-20 sm:mx-5 text-center text-secondary -mt-8 bg-white border-primary border text-2xl rounded py-2'>{item.title}</h1>
                 <img src={item.image} alt='' className='h-24 w-24'/>
                 <p className='text-gray-600 text-md hover:text-primary'>{item.description}</p>
             </div>

@@ -3,7 +3,7 @@ import React from 'react'
 const WhyMarketing = () => {
   return (
     <div className='mt-20'>
-      <h1 className='text-primary font-semibold text-8xl text-center'>Why <b className='text-secondary'>Marketing</b> ? </h1>
+      <h1 className='text-primary font-semibold text-8xl text-center sm:text-5xl'>Why <b className='text-secondary'>Marketing</b> ? </h1>
       <div className='h-[400px]'>
       <lottie-player src="https://assets8.lottiefiles.com/private_files/lf30_GjhcdO.json"  background="transparent"  speed="1" loop autoplay></lottie-player>
       </div>

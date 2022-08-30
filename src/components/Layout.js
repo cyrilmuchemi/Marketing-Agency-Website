@@ -1,9 +1,10 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Layout = ({children}) => {
   
-  const location = useLocation()
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const menuItems = [
     {
@@ -33,7 +34,7 @@ const Layout = ({children}) => {
     <div className='pb-44 overflow-x-hidden'>
       {children}
     </div>
-      <div className='fixed bottom-10 left-0 right-0'>
+      <div className='fixed bottom-10 sm:bottom-0 left-0 right-0'>
         <div className='flex justify-center w-full'>
           {menuItems.map((item, index) => {
             return <div className='flex flex-col justify-end items-center'>
@@ -44,9 +45,11 @@ const Layout = ({children}) => {
                 <i className={`${item.icon} text-xl text-white`}></i>
               </div>
             </div>)}
-            <div className={`px-20 bg-primary py-5 ${index===0 && 'rounded-l'} ${index===menuItems.length-1 && 'rounded-r'} flex items-center justify-center space-x-2`}>
-              {location.pathname !== item.path && <i className={`${item.icon} text-secondary text-xl`}></i>}
-              <Link to={`${item.path}`} className='text-secondary text-xl'>{item.title}</Link>
+            <div className={`px-20 sm:px-10 bg-primary py-5 ${index===0 && 'rounded-l'} ${index===menuItems.length-1 && 'rounded-r'} flex items-center justify-center space-x-2`}>
+              {location.pathname !== item.path && <i 
+              onClick={()=>navigate(item.path)}
+              className={`${item.icon} text-secondary text-xl`}></i>}
+              <Link to={`${item.path}`} className={`text-secondary text-xl ${item.path!==location.pathname && 'sm:hidden'}`}>{item.title}</Link>
             </div>
             </div>
           })}
